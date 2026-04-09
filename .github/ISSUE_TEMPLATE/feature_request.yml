@@ -1,0 +1,71 @@
+name: 💡 Feature Request
+description: Suggest a new feature or improvement for the JARVIS device
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Feature Request
+
+        Have an idea for the JARVIS device? We'd love to hear it!
+
+        **Before filing:** Search existing issues and pull requests to see if someone has already suggested something similar.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Motivation
+      placeholder: |
+        Describe the problem you're trying to solve, or why this feature would be useful.
+        Example: "I want to control the TV in my living room using voice commands"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      placeholder: |
+        Describe your proposed solution.
+        Example: "Add IR transmitter support to the ESP32 device"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions you've considered?
+      placeholder: |
+        Example: "I considered using MQTT for IR commands but latency was too high"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Firmware
+        - Hardware
+        - Voice Pipeline
+        - Wake Word
+        - Home Assistant Integration
+        - MQTT
+        - OTA Updates
+        - Documentation
+        - Other
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: You're willing to help implement?
+      options:
+        - label: "I'm willing to help test this feature"
+          required: false
+        - label: "I can help write firmware code"
+          required: false
+        - label: "I can design PCB hardware"
+          required: false
