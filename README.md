@@ -126,7 +126,9 @@ jarvis-device/
 ├── bom/
 │   └── bom.csv              # Parts list with supplier links
 ├── docs/
-│   └── ASSEMBLY.md          # Step-by-step build guide
+│   ├── ASSEMBLY.md          # Step-by-step build guide
+│   ├── FLASHING.md          # How to flash firmware (PlatformIO, ESP-IDF, esptool, OTA)
+│   └── TROUBLESHOOTING.md   # Common problems and fixes
 ├── .github/
 │   └── ISSUE_TEMPLATE/      # Bug reports, feature requests
 ├── CONTRIBUTING.md
@@ -173,24 +175,13 @@ All audio processing happens **on-device** (VAD) and on **your JARVIS server**. 
 
 ## 🐛 Troubleshooting
 
-**No serial output on boot:**
-- Try a different USB cable (data-capable, not charge-only)
-- Hold BOOT, press RESET, release BOOT → try flashing again
+**Full troubleshooting guide:** [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md) — covers flash issues, WiFi, MQTT, WebSocket, audio, LEDs, and factory reset.
 
-**WiFi won't connect:**
-- ESP32-S3 only supports 2.4GHz (not 5GHz)
-- Double-check SSID/password (case-sensitive)
-- `idf.py erase-flash` to wipe and start fresh
-
-**LED ring wrong colors / flickering:**
-- Add 100µF capacitor across 5V/GND near the ring
-- Check data wire connection (GPIO48 → DIN)
-- Reduce brightness in `config.h`
-
-**INMP441 no audio:**
-- L/R pin MUST be connected to GND
-- Verify 3.3V power to the mic
-- Inspect I2S solder joints under magnification
+Quick fixes:
+- **No serial output:** Try a different USB cable (data-capable). Hold BOOT, tap RESET, release BOOT → try flashing.
+- **WiFi won't connect:** ESP32-S3 only supports 2.4GHz. Check SSID/password. Run `pio run --target erase` to wipe.
+- **LED ring flickering:** Add 100µF capacitor across 5V/GND near the ring. Add 330Ω resistor on GPIO48 → DIN.
+- **No audio:** L/R pin on INMP441 MUST be GND. Check 3.3V power. Tune `VAD_THRESHOLD` in `config.h`.
 
 ---
 
