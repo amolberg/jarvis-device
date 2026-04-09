@@ -1,0 +1,108 @@
+name: 🐛 Bug Report
+description: Report a firmware bug or hardware issue with the JARVIS device
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+
+        Thanks for reporting! Please fill out as much detail as possible so we can reproduce and fix the issue.
+
+        **Before filing:** Check if the issue is already reported by searching existing issues.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Component
+      options:
+        - Firmware (ESP32-S3)
+        - Microphone (INMP441)
+        - LED Ring (WS2812B)
+        - WiFi / Network
+        - MQTT / Home Assistant
+        - Voice Pipeline (STT/TTS)
+        - Wake Word Detection
+        - OTA Updates
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      placeholder: |
+        A clear and concise description of what the bug is.
+        Example: "LED ring shows wrong colors after firmware update"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Press '...'
+        3. See error
+        
+        Expected behavior: ...
+        Actual behavior: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Serial Logs
+      description: Output from the serial monitor (115200 baud)
+      placeholder: |
+        Paste the relevant serial output here.
+        To get logs: pio device monitor --baud 115200
+    validations:
+      required: false
+
+  - type: input
+    id: firmware-version
+    attributes:
+      label: Firmware Version
+      placeholder: "e.g. v1.0.0 or commit hash"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Hardware Variant
+      options:
+        - ESP32-S3-DevKitC-1 N8R8
+        - ESP32-S3-WROOM-1U (custom PCB)
+        - ReSpeaker 2-Mic HAT
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - WiFi: Home network (2.4GHz)
+        - JARVIS Core: 10.0.0.74:8080
+        - Home Assistant: 10.0.0.7:8123
+        - Operating System: Raspberry Pi OS / Ubuntu / etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "I searched for existing issues first"
+          required: true
+        - label: "I tested with the latest firmware version"
+          required: true
+        - label: "I checked wiring connections"
+          required: false
