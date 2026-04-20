@@ -193,4 +193,4 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for setup guide, code style, and PR pro
 
 ## 📜 License
 
-MIT — Zebratic 2026 — Build it, break it, improve it.
+MIT — amolberg 2026 — Build it, break it, improve it.
