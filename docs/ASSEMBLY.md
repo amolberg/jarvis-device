@@ -335,4 +335,4 @@ Once assembled and running:
 
 ---
 
-*Built with ❤️ by Zebratic — April 2026*
+*Built with ❤️ by amolberg — April 2026*

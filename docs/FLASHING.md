@@ -144,7 +144,7 @@ If you don't want to compile, use the pre-built OTA binary.
 curl -O http://10.0.0.74:8080/ota/jarvis-device.bin
 
 # Or from GitHub releases (coming soon)
-curl -O https://github.com/Zebratic/jarvis-device/releases/latest/download/jarvis-device.bin
+curl -O https://github.com/amolberg/jarvis-device/releases/latest/download/jarvis-device.bin
 ```
 
 ### Flash via esptool

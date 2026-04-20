@@ -115,7 +115,7 @@ static void publish_discovery(void) {
                 "identifiers":["%s"],
                 "name":"JARVIS Room Device",
                 "model":"ESP32-S3 DIY Node",
-                "manufacturer":"Zebratic"
+                "manufacturer":"amolberg"
             },
             "json_attributes_topic":"%s"
         })",

@@ -187,5 +187,5 @@
   <text x="545" y="632" fill="#888" font-size="10">LED ring MUST be powered from 5V rail, NOT 3.3V.</text>
 
   <!-- Version -->
-  <text x="880" y="635" text-anchor="end" fill="#555" font-size="9">jarvis-device v1.0 | Zebratic 2026</text>
+  <text x="880" y="635" text-anchor="end" fill="#555" font-size="9">jarvis-device v1.0 | amolberg 2026</text>
 </svg>

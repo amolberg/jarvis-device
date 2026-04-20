@@ -298,7 +298,7 @@ After erasing, the device will re-broadcast its WiFi AP for reconfiguration (if 
 1. **Serial output is your best friend** — always start with `pio device monitor` or `idf.py monitor`
 2. **Check JARVIS Core logs** — `curl http://10.0.0.74:8080/api/health` and JARVIS Core console
 3. **Check Home Assistant logs** — Settings → System → Logs → MQTT
-4. **Open an issue** at https://github.com/Zebratic/jarvis-device/issues with:
+4. **Open an issue** at https://github.com/amolberg/jarvis-device/issues with:
    - Board model (ESP32-S3 DevKitC-1 N8R8?)
    - Serial output (paste the last 50 lines from serial monitor)
    - Steps to reproduce

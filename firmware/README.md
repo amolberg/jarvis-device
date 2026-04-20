@@ -178,4 +178,4 @@ Place firmware binary at `http://<JARVIS_CORE_HOST>/ota/jarvis-device.bin`. Devi
 
 ## License
 
-MIT — Zebratic
+MIT — amolberg

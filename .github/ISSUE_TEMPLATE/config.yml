@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 Discussion
-    url: https://github.com/Zebratic/jarvis-device/discussions
+    url: https://github.com/amolberg/jarvis-device/discussions
     about: Ask questions, share builds, get help
   - name: 📖 Documentation
-    url: https://github.com/Zebratic/jarvis-device/tree/main/docs
+    url: https://github.com/amolberg/jarvis-device/tree/main/docs
     about: Assembly guide and setup docs
   - name: 🛒 Parts Sourcing
-    url: https://github.com/Zebratic/jarvis-device/blob/main/bom/bom.csv
+    url: https://github.com/amolberg/jarvis-device/blob/main/bom/bom.csv
     about: Full BOM with supplier links and pricing
